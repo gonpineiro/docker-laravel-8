@@ -34,7 +34,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
    cp .env.example .env
    ```
 
-3. You need **Create** or **Put** your laravel project in the folder source; to create follow the next instructions [Here](source/README.md).
+3. You need **Create** or **Put** your laravel project in the folder source;
 
 4. Build the project whit the next commands:
 
