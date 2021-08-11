@@ -18,7 +18,7 @@ services:
       dockerfile: ./compose/nginx/Dockerfile
     container_name: nginx
     ports:
-      - "8080:80"
+      - "8085:80"
       # Port for xdebug (ensure this matches the remote_port in the xdebug.ini)
       - "9001:9001"
     volumes:
@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "33306:3306"
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USERNAME} 
