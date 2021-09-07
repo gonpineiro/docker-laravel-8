@@ -6,7 +6,7 @@
 
 A pretty simplified Docker Compose workflow that sets up a LEMP (Linux, NGINX, MySQL, PHP) network of containers for local Laravel development.
 
-## Ports
+#### Ports
 
 Ports used in the project:
 | Software | Port |
@@ -18,7 +18,7 @@ Ports used in the project:
 | **xdebug** | 9001 |
 | **redis** | 6379 |
 
-## Use
+#### Use
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/) on your system and [Docker Compose](https://docs.docker.com/compose/install/), and then clone this repository.
 
@@ -44,7 +44,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
 
 ---
 
-## Remember
+#### Remember
 
 The configuration of the database **must be the same on both sides** .
 
@@ -78,7 +78,7 @@ DB_HOST=mysql
 
 ---
 
-## Special Cases
+#### Special Cases
 
 To Down and remove the volumes we use the next command:
 
@@ -104,18 +104,11 @@ Run all migrations:
 docker-compose run --rm artisan migrate
 ```
 
-# This is where your Laravel app goes
+### This is where your Laravel app goes
 
-`source/`
-Add your Laravel project here (or create a new blank one).
+ Add your Laravel project in `source/` (or create a new blank one).
 
----
-
-**Note:** IF exist problems generate the project delete this README.md
-
----
-
-## Remember
+#### Remember
 
 The configuration of the database **must be the same on both sides** .
 
@@ -149,17 +142,17 @@ DB_HOST=mysql
 
 ---
 
-## Help
+#### Help
 
 A little help to create the project:
 
-### Make a new Project
+##### Make a new Project
 
 ```sh
 docker-compose run --rm composer create-project laravel/laravel .
 ```
 
-### Copy Environment
+##### Copy Environment
 
 ```sh
 cp .env.example .env
@@ -167,19 +160,19 @@ cp .env.example .env
 
 ---
 
-### Install Libraries from Composer
+##### Install Libraries from Composer
 
 ```sh
 docker-compose run --rm composer install
 ```
 
-### Install Libraries from Node
+##### Install Libraries from Node
 
 ```sh
 docker-compose run --rm npm install
 ```
 
-### Clear/Clean the project
+##### Clear/Clean the project
 
 ```sh
 docker-compose run --rm artisan clear:data
@@ -191,19 +184,19 @@ docker-compose run --rm artisan config:cache
 docker-compose run --rm artisan storage:link
 ```
 
-### Generate Keys
+##### Generate Keys
 
 ```sh
 docker-compose run --rm artisan key:generate
 ```
 
-### Run migrations
+##### Run migrations
 
 ```sh
 docker-compose run --rm artisan migrate --seed
 ```
 
-### Run Passport (Optional)
+##### Run Passport (Optional)
 
 ```sh
 docker-compose run --rm artisan passport:install
