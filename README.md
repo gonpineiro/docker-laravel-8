@@ -42,6 +42,27 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
    docker-compose up --build
    ```
 
+4. Create .vscode/launch.json in source folder
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Listen for XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9001,
+            "pathMappings": {
+                "/var/www/html/": "${workspaceRoot}"
+            },
+            "hostname": "localhost"
+        }
+    ]
+}
+
+```
+
 ---
 
 #### Remember
